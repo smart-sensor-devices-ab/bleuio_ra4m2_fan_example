@@ -457,21 +457,18 @@ void process_co2_data(uint32_t co2_val)
         TURN_GREEN_OFF;
         TURN_RED_OFF;
         APP_PRINT("\r\n>> CO2: %lu ppm (Good)", CO2_val);
-
-
-
     }
     else if(co2_val < 1000)
     {
-        TURN_BLUE_ON;
+        TURN_BLUE_OFF;
         TURN_GREEN_ON;
         TURN_RED_OFF;
         APP_PRINT("\r\n>> CO2: %lu ppm (Average)", CO2_val);
     }
     else
     {
-        TURN_BLUE_ON;
-        TURN_GREEN_ON;
+        TURN_BLUE_OFF;
+        TURN_GREEN_OFF;
         TURN_RED_ON;
         APP_PRINT("\r\n>> CO2: %lu ppm (Poor)", CO2_val);
     }
